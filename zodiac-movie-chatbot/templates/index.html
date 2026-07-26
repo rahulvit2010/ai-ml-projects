@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tara &mdash; Zodiac &amp; Movie Chatbot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <canvas id="starfield"></canvas>
+
+  <main class="app">
+    <header class="app-header">
+      <div class="logo">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="9" r="1.6" fill="var(--gold)"/>
+          <circle cx="24" cy="6" r="1.3" fill="var(--gold)"/>
+          <circle cx="27" cy="19" r="1.8" fill="var(--gold)"/>
+          <circle cx="13" cy="24" r="1.4" fill="var(--gold)"/>
+          <circle cx="6" cy="20" r="1.1" fill="var(--gold)"/>
+          <path d="M8 9 L24 6 L27 19 L13 24 L6 20 L8 9" stroke="var(--gold)" stroke-width="0.7" stroke-opacity="0.55" fill="none"/>
+        </svg>
+      </div>
+      <div class="titles">
+        <h1>Tara</h1>
+        <p>Tell me your birth date for a zodiac reading, or ask for a movie pick</p>
+      </div>
+      <button id="reset-btn" title="Start a new conversation">Reset</button>
+    </header>
+
+    <section class="chat-card">
+      <div id="messages" class="messages"></div>
+
+      <div id="suggestions" class="suggestions">
+        <button class="chip chip-zodiac" data-msg="What is my zodiac sign?">&#9733; What is my zodiac sign?</button>
+        <button class="chip chip-movie" data-msg="Suggest a Hindi action movie with Shah Rukh Khan">&#127916; Suggest a Hindi action movie</button>
+        <button class="chip chip-zodiac" data-msg="Tell me about Leo">&#9733; Tell me about Leo</button>
+      </div>
+
+      <form id="chat-form" class="chat-input" autocomplete="off">
+        <input id="chat-text" type="text" placeholder="Ask about your zodiac sign or a movie..." maxlength="300" />
+        <button type="submit" aria-label="Send">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 11.5L21 3L13.2 21L10.5 13.5L3 11.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+    </section>
+
+    <p class="footnote">Intent classified with a TF-IDF + Logistic Regression model &middot; built as a hackathon project</p>
+  </main>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

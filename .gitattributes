@@ -1,0 +1,2 @@
+zodiac-movie-chatbot/data/slots/actor.dat filter=lfs diff=lfs merge=lfs -text
+zodiac-movie-chatbot/data/movie.csv filter=lfs diff=lfs merge=lfs -text
