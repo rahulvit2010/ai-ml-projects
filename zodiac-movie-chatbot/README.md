@@ -184,20 +184,3 @@ route).
 ├── Procfile                            # for Render/Railway
 └── .gitattributes                        # Git LFS config
 ```
-
-## Showcasing on LinkedIn
-
-A few things that tend to land well for a project like this:
-
-- **Screen-record a short clip** (15-30s) of an actual conversation: ask
-  for a zodiac sign, then ask for a movie and watch it ask follow-ups.
-  A live back-and-forth reads much better than static screenshots.
-- **Lead with the problem, not the stack**: "Built a chatbot that figures
-  out what you're asking for and asks smart follow-up questions" lands
-  better than "Built a Flask + scikit-learn app."
-- **Mention the interesting engineering bit**: going from a 2.17-million-row
-  substring scan per message to a dictionary-lookup approach is a concrete,
-  relatable "I optimized this" story — much more memorable than "I deployed
-  a model."
-- Link the live Streamlit app URL directly in the post (not just the
-  GitHub repo) so people can try it in one click.
